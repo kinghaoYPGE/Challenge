@@ -1,5 +1,5 @@
-#Git 常用命令
-##仓库
+###Git 常用命令
+###仓库
 #### 在当前目录新建一个Git代码库
 $ git init
 
@@ -102,7 +102,7 @@ $ git branch -d [branch-name]
 #### 删除远程分支
 $ git push origin --delete [branch-name]
 $ git branch -dr [remote/branch]
-##标签
+###标签
 #### 列出所有tag
 $ git tag
 
@@ -129,7 +129,7 @@ $ git push [remote] --tags
 
 #### 新建一个分支，指向某个tag
 $ git checkout -b [branch] [tag]
-##查看信息
+###查看信息
 #### 显示有变更的文件
 $ git status
 
@@ -190,7 +190,7 @@ $ git show [commit]:[filename]
 
 #### 显示当前分支的最近几次提交
 $ git reflog
-##远程同步
+###远程同步
 #### 下载远程仓库的所有变动
 $ git fetch [remote]
 
@@ -214,7 +214,7 @@ $ git push [remote] --force
 
 #### 推送所有分支到远程仓库
 $ git push [remote] --all
-##撤销
+###撤销
 #### 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 
