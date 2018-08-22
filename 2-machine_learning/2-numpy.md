@@ -6,7 +6,7 @@ NumPy 的主要对象是多维数组 Ndarray。
 
 ## array define
 
-### 1. array
+### 1. array -创建数组
 
 use array to new matrices
 
@@ -16,7 +16,7 @@ np.array([(1,2,3),(4,5,6)]) #创建二维数组rank=2, axes=3
 
 ```
 
-### 2. zeros
+### 2. zeros -创建`元素为0`的数组
 
 创建全为 0 的二维数组
 
@@ -26,7 +26,7 @@ out: array([[0., 0., 0.],
         	[0., 0., 0.]])	
 ```
 
-### 3. ones
+### 3. ones -创建`元素为1`的数组
 
 创建全为 1 的三维数组
 
@@ -41,7 +41,7 @@ out: array([[[1., 1., 1., 1.],
         	[1., 1., 1., 1.]]])
 ```
 
-### 4. arange
+### 4. arange -创建`等差`数组
 
 ```
 np.arange(5) #创建一维等差数组
@@ -66,7 +66,7 @@ out: array([[[ 0,  1,  2],
         	[24, 25, 26]]])
 ```
 
-### 4. eye
+### 4. eye -创建`单位矩阵`
 
 ```
 np.eye(3) #创建单位矩阵（二维数组）
@@ -75,14 +75,14 @@ out: array([[1., 0., 0.],
        		[0., 0., 1.]])
 ```
 
-### 5. linspace
+### 5. linspace -创建`等间隔数组`
 
 ```
 np.linspace(1, 10, num=6) #创建等间隔一维数组
 out: array([ 1. ,  2.8,  4.6,  6.4,  8.2, 10. ])
 ```
 
-### 6. random.rand
+### 6. random.rand -创建`随机数组`
 
 ```
 np.random.rand(2,3) #创建二维随机数组
@@ -90,7 +90,7 @@ out: array([[0.50122984, 0.98824375, 0.81388012],
        	   [0.60951775, 0.02055326, 0.97622093]])
 ```
 
-### 7. random.randint
+### 7. random.randint -创建`随机整数组`
 
 ```
 np.random.randint(5, size=(2,3)) #创建二维随机整数数组（数值小于 5）
@@ -98,7 +98,7 @@ out: array([[2, 0, 2],
        		[4, 4, 4]])
 ```
 
-### 8. fromfunction
+### 8. fromfunction -`自定义`矩阵
 
 usage: np.fromfunction(function, (size))
 
@@ -151,5 +151,22 @@ np.mat(A) * np.mat(B)
 out: matrix([[19, 22],
         	[43, 50]])
        	  
+```
+
+### 4. 矩阵的`转置`(A->A.T)
+
+```
+A.T
+out:array([[1, 3],
+       	[2, 4]])
+```
+
+### 5. linalg.inv -矩阵`求逆`(A->1/A)
+
+```
+#这里要注意必须是方阵才可以求逆
+np.linalg.inv(A)
+out: array([[-2. ,  1. ],
+       		[ 1.5, -0.5]])
 ```
 
