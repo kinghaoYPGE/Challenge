@@ -172,3 +172,39 @@ regressor.fit(X_train, Y_train)
 y_pred = regressor.predict(X_test)
 ```
 
+### 4. 实战
+
+#### 实战 1-对股票数据进行分析预测
+
+- [ ] https://www.shiyanlou.com/courses/1145
+
+##### 1. 数据来源
+
+1. 雅虎财经
+2. Python Quandl 模块
+
+```
+import quandl
+quandl.get('WIKI/AAPL')
+```
+
+1. Pandas Datareader 模块
+
+```
+import pandas_datareader.data as web
+import datetime
+#start = datetime.datetime(2018, 1, 1)
+end = datetime.datetime.now()
+start = 10 * datatime.timedelta(days=365)
+df = web.DataReader('000001.SZ', 'yahoo', start, end)
+```
+
+##### 2. 数据预处理
+
+1. 缺失值处理
+
+```
+# 判断是否有缺失值
+df.isnull().values.sum()
+```
+

@@ -1,4 +1,8 @@
-### 机器学习之线性回归python实现
+# TODO list
 
-- [ ] https://blog.csdn.net/iloveyousunna/article/details/77980619
+下面是我们学习机器学习中遇到的一些挑战和作业
+
+### 1. Linear Regression(线性回归)
+
+
 
