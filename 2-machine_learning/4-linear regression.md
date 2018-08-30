@@ -208,3 +208,10 @@ df = web.DataReader('000001.SZ', 'yahoo', start, end)
 df.isnull().values.sum()
 ```
 
+2. 数据可视化
+
+```
+# pandas的dataframe自带一些画图的方法，也是基于matplotlib
+df['Close'].plot(figsize=(16, 9))
+```
+
