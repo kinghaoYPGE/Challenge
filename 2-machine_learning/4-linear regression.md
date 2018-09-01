@@ -185,6 +185,8 @@ y_pred = regressor.predict(X_test)
 
 ```
 import quandl
+# 该 API KEY 仅限实验楼课程使用，其他用途请自行注册
+quandl.ApiConfig.api_key = 'DdXEs2xFciyUXrER9-a7'
 quandl.get('WIKI/AAPL')
 ```
 
@@ -197,21 +199,53 @@ import datetime
 end = datetime.datetime.now()
 start = 10 * datatime.timedelta(days=365)
 df = web.DataReader('000001.SZ', 'yahoo', start, end)
+
+# DataReader可以设置缓存机制, 将数据缓存到本地, 推荐使用
+import requests_cache
+# 设定缓存及过期时间
+expire_after = datetime.timedelta(days=3)
+session = requests_cache.CachedSession(cache_name='cache', backend='sqlite', expire_after=expire_after)
+
+end = datetime.datetime.now() # 指定结束时间
+start = end - 10 * datetime.timedelta(days=365) # 10 年前
+
+# 获取股票交易代码为 000001.SZ 的数据
+df = web.DataReader('000001.SZ', 'yahoo', start, end, session=session)
+df
 ```
 
 ##### 2. 数据预处理
 
-1. 缺失值处理
+1. ###### 缺失值处理
 
 ```
 # 判断是否有缺失值
 df.isnull().values.sum()
 ```
 
-2. 数据可视化
+2. ###### 数据可视化
 
 ```
 # pandas的dataframe自带一些画图的方法，也是基于matplotlib
 df['Close'].plot(figsize=(16, 9))
 ```
 
+通过 `plt.style.available` 查看全部绘图样式，推荐绘图样式：
+
+- dark_background
+- seaborn-whitegrid
+- fivethirtyeight
+
+```
+plt.style.use('seaborn-whitegrid')
+
+df.plot(figsize=(16, 9))
+```
+
+3. ###### 数据规范化
+
+Min-Max 标准化是最常用的规范化手段之一，其公式为： 
+
+$$\hat x=\frac{x-x_{min}}{x_{max}-x_{min}}$$
+
+其中，$x_{max}​$ 为样本数据的最大值，$x_{min}​$ 为样本数据的最小值，$x_{max}-x_{min}​$ 为极差。

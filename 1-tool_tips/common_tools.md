@@ -8,3 +8,7 @@
 
 - https://zhuanlan.zhihu.com/p/33105153
 
+### python操作SQLite3
+
+- https://www.cnblogs.com/lemonbit/p/7078038.html
+
