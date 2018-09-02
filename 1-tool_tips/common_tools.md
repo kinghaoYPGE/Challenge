@@ -1,12 +1,21 @@
 # 常用工具收集(更新中)
 
+### Vim
+
+- vim文档操作 https://www.shiyanlou.com/courses/2/labs/17/document
+- vim查找替换https://www.shiyanlou.com/courses/2/labs/18/document
+
+### Linux常用命令
+
+- http://www.cnblogs.com/yjd_hycf_space/p/7730690.html
+
 ### Git
 
 - https://www.jianshu.com/p/bcd155258985
 
 ### Jupyter Notebook
 
-- https://zhuanlan.zhihu.com/p/33105153
+- https://zhuanlan.zhihu.com/p/33105153s
 
 ### python操作SQLite3
 
