@@ -15,7 +15,9 @@
 
 ### Jupyter Notebook
 
-- https://zhuanlan.zhihu.com/p/33105153s
+- 使用手册: https://zhuanlan.zhihu.com/p/33105153, https://blog.csdn.net/DataCastle/article/details/78890469
+
+- 使用技巧: https://www.zhihu.com/question/59392251
 
 ### python操作SQLite3
 
