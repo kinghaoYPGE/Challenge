@@ -16,8 +16,31 @@
 ### Jupyter Notebook
 
 - 使用手册: https://zhuanlan.zhihu.com/p/33105153, https://blog.csdn.net/DataCastle/article/details/78890469
-
 - 使用技巧: https://www.zhihu.com/question/59392251
+
+```
+# 加载指定网站的源代码到笔记本中
+%load URL
+
+# 加载本地的Python文件并执行文件代码
+%load Python文件的绝对路径
+
+# 不想在Jupyter Notebook的单元格中加载本地Python文件，想要直接运行
+%run Python文件的绝对路径
+!python3 Python文件的绝对路径
+!python Python文件的绝对路径
+
+# 想要显示python的matplotlib图像
+%matplotlib inline
+
+# 想要在Jupyter Notebook中获取当前所在位置的绝对路径
+%pwd
+# "!pwd"属于 !shell命令 语法的使用，即在Jupyter Notebook中执行shell命令的语法。
+!pwd
+
+```
+
+
 
 ### python操作SQLite3
 
