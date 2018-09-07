@@ -56,3 +56,10 @@
 - https://blog.csdn.net/weixin_40475396/article/details/78508413
 - https://blog.csdn.net/starzhou/article/details/73613185
 
+### 机器学习数据来源
+
+https://blog.csdn.net/alec1987/article/details/69388699
+
+https://zhuanlan.zhihu.com/p/25138563
+
+http://dataju.cn/Dataju/web/home
