@@ -58,8 +58,16 @@
 
 ### 机器学习数据来源
 
-https://blog.csdn.net/alec1987/article/details/69388699
+<https://blog.csdn.net/alec1987/article/details/69388699>
 
-https://zhuanlan.zhihu.com/p/25138563
+<https://zhuanlan.zhihu.com/p/25138563>
 
-http://dataju.cn/Dataju/web/home
+<http://dataju.cn/Dataju/web/home>
+
+那如何获取数据和项目呢？一个捷径就是积极参加国内外各种数据挖掘竞赛，数据直接下载下来，按照竞赛的要求去不断优化，积累经验。国外的**Kaggle**和国内的**DataCastle** 以及**阿里天池**比赛都是很好的平台
+
+股票相关数据:
+
+1. 雅虎财经
+2. Python Quandl 模块
+3. Pandas Datareader 模块
