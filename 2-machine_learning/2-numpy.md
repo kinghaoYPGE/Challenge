@@ -315,3 +315,56 @@ out: array([2.05480467, 2.05480467, 3.09120617])
 ### 6. 数组取整
 
 https://www.jianshu.com/p/23a9224780e8
+
+### 7. reshape占位符(-1)
+
+```
+a = np.array([1,2,3,4,5])
+a.shape
+out: (5,)
+a.reshape(1, -1)
+a.shape
+out: (1, 5)
+```
+
+### 8. np.full
+
+```
+a = np.full((3,3), 0) # 相当于zeros
+a = np.full((3,3), 1) # 相当于ones
+```
+
+### 9. 其他函数
+
+```python
+# 获取数组中大于10的元素
+a[a>10]
+
+# sum
+np.sum(a)
+np.sum(a, axis=0)
+np.sum(a, axis=1)
+
+# mean
+np.mean(a)
+np.mean(a, axis=0)
+np.mean(a, axis=1)
+
+# uniform
+np.random.uniform(3,4) # 产生随机数
+
+# tile
+np.tile(a, (1, 2)) # 重复当前元素生成新的数组
+
+# argsort
+a.argsort() # 会得到每个元素的下标
+a.argsort(axis=0)
+
+# 广播
+a = np.array([1,2,3],
+            [2,3,4],
+            [5,6,7])
+b = np.array([1,2,3])
+# 想把a的每一行都加上b，直接使用+即可
+a + b
+```

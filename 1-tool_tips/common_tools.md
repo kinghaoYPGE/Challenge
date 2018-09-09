@@ -71,3 +71,9 @@
 1. 雅虎财经
 2. Python Quandl 模块
 3. Pandas Datareader 模块
+
+### 常用搜索语法
+
+https://blog.csdn.net/nuoya_1995/article/details/52621323
+
+https://www.jianshu.com/p/9a0b33419c0b
