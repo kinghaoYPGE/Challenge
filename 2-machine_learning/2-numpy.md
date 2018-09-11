@@ -87,6 +87,13 @@ out: array([[1., 0., 0.],
 ```
 np.linspace(1, 10, num=6) #创建等间隔一维数组
 out: array([ 1. ,  2.8,  4.6,  6.4,  8.2, 10. ])
+
+# 注意linspace中endpoint参数
+np.linspace(0, 10,num=10, dtype='int32', endpoint=True)
+out: array([ 0,  1,  2,  3,  4,  5,  6,  7,  8, 10], dtype=int32)
+
+np.linspace(0, 10,num=10, dtype='int32', endpoint=False)
+out: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=int32)
 ```
 
 ### 6. random.rand -创建`随机数组`
@@ -115,6 +122,36 @@ out: array([[0., 1., 2.],
        		[1., 2., 3.],
        		[2., 3., 4.]])
 ```
+
+
+
+### 9. 从已知数据创建
+
+1. `frombuffer（buffer）`：将缓冲区转换为 `1` 维数组。
+2. `fromfile（file，dtype，count，sep）`：从文本或二进制文件中构建多维数组。
+3. `fromfunction（function，shape）`：通过函数返回值来创建多维数组。
+4. `fromiter（iterable，dtype，count）`：从可迭代对象创建 `1` 维数组。
+5. `fromstring（string，dtype，count，sep）`：从字符串中创建 `1` 维数组。
+
+### 10. ndarry其他属性
+
+
+
+```
+b = np.array([[1,2,3],[4,5,6],[7,8,9]])
+b.imag  	# ndarray.imag 用来输出数组包含元素的虚部。 
+out: array([[0, 0, 0],
+       [0, 0, 0],
+       [0, 0, 0]])
+b.real 		# ndarray.real用来输出数组包含元素的实部。
+out: array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+b.size		# ndarray.size用来输出数组中的总包含元素数。  
+out: 9
+```
+
+
 
 ## array/matrix calculation
 
@@ -222,7 +259,8 @@ a.reshape(2, 3) # 更改数组形状（改变原始数组）
 out:array([[0.5041298 , 0.90467466, 0.05589025],
        [0.11222457, 0.24464299, 0.17077689]])
        
-a.ravel() #展平数组       
+a.ravel(order='C') 
+#展平数组 order 表示变换时的读取顺序，默认是按照行依次读取，当 order='F' 时，可以按列依次读取排序
 out: array([0.5041298 , 0.90467466, 0.05589025, 0.11222457, 0.24464299,
        0.17077689])
        
@@ -288,7 +326,7 @@ out: array([0, 1, 2])
 
 ### 5.数组统计
 
-```
+```python
 # 生成示例数组
 a = np.array(([1,4,3],[6,2,9],[4,7,2]))
 a
@@ -310,6 +348,12 @@ out: array([1.55555556, 8.22222222, 4.22222222])
 
 np.std(a, axis=0) #统计数组各列的标准偏差
 out: array([2.05480467, 2.05480467, 3.09120617])
+
+np.sin(a) # 三角函数
+np.exp(a) # 指数函数
+np.sqrt(a) # 开平方
+np.power(a, 3) # 方根运算
+
 ```
 
 ### 6. 数组取整

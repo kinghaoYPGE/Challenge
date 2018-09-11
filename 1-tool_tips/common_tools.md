@@ -13,6 +13,10 @@
 
 - https://www.jianshu.com/p/bcd155258985
 
+### GitLab
+
+### GitBook
+
 ### Jupyter Notebook
 
 - 使用手册: https://zhuanlan.zhihu.com/p/33105153, https://blog.csdn.net/DataCastle/article/details/78890469
