@@ -271,6 +271,8 @@ https://www.ziiai.com/blog/232
 
 https://www.ziiai.com/blog/562?from=home_banner
 
+https://www.ziiai.com/blog/603（机器学习相关数学）
+
 文章的最后部分，我们继续放送干货。其实机器学习的优质资源非常多。博主也是翻遍浏览器收藏夹，也问同事取了取经，整合了一部分资源罗列如下：
 
 4.1 入门资源
